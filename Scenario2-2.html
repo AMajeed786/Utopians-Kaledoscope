@@ -73,20 +73,6 @@
             justify-content:center; 
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
-.grid3 {
-            width: 355px;
-            height: 390px;
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 13px;
-            margin: 13px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content:center; 
-            animation: backgroundBlink 0.75s infinite; 
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
        
         /* Modal styles */
         .modal-container {
@@ -219,24 +205,18 @@
             }
         }
 
+        /* Define the background blink animation */
         @keyframes backgroundBlink {
-    0% {
-        background-color: #fff;
-    }
-    45% {
-        background-color: #fff;
-    }
-    50% {
-        background-color: #ff0000; /* A thicker red color */
-    }
-    55% {
-        background-color: #ff0000;
-    }
-    100% {
-        background-color: #fff;
-    }
-}
-
+            0% {
+                background-color: #fff;
+            }
+            50% {
+                background-color: #ffdddd;
+            }
+            100% {
+                background-color: #fff;
+            }
+        }
         #notification-bell {
     position: relative;
     font-size: 24px;
@@ -260,60 +240,8 @@
 .message-line {
     margin: 10px 0; /* Add space above and below each line */
 }
-  .modal-container2 {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-            align-items: center;
-            justify-content: center;
-            backdrop-filter: blur(8px);
-        }
-        .modal-box2 {
-            background-color: #0265b5; /* Background color of the modal */
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            max-width: 80%; /* Adjust the maximum width as needed */
-            text-align: center;
-        }
-
-        .modal-title2 {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color:chartreuse;
-        }
-
-        .modal-content2 {
-            font-size: 18px;
-            margin-bottom: 20px;
-            color: #ffffff;
-        }
-
-        .modal-button2 {
-            background-color: #007BFF; /* Button background color */
-            color: #fff; /* Button text color */
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .modal-button2:hover {
-            background-color: #0056b3; /* Hover state background color */
-        }
-        .legend {
+/* Add styles for legends */
+.legend {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
@@ -350,14 +278,14 @@
     </header>
     <nav id="navbar" class="sticky">
         <ul>
-            <li><a href="Scenario2.html">Home</a></li>
+            <li><a href="Scenario1.html">Home</a></li>
             <li><a href="About.html">About</a></li>
             <li><a href="Service.html">Services</a></li>
-            <li><a href="Scenario2v2.html" id="notification-bell"><i class="fas fa-bell"></i></a></li>
+            <li><a href="Scenario1V2.html" id="notification-bell"><i class="fas fa-bell"></i></a></li>
         </ul>
     </nav>
 <main>
-    <div class="grid2" data-patient-details="John Doe | P001, Ward - Bed Number : A1 - 101, Age: 63, FamilyRecord: Diabetes, Smoker: Yes, Bmi: 23.7, Drug Allergy: No" onclick="showMessageBox(this)">
+    <div class="grid2" data-patient-details="John Doe | P001, Ward - Bed Number : A1 - 101, Age:63, FamilyRecord: Diabetes, Smoker: Yes, Bmi: 23.7, Drug Allergy: No, Current Medical Condition : Cancer" onclick="showMessageBox(this)">
         <div class="legend">
             <div class="legend-icon legend-heart"></div>
             <div class="legend-text">Heart Rate</div>
@@ -390,7 +318,7 @@
             <p>Ward - Bed Number : A1 - 101</p>
         </div>
     </div>
-    <div class="grid2" data-patient-details="Choon Hup | P002, Ward - Bed Number : A1 - 102, Age: 61, FamilyRecord: Heart Attack, Smoker: No, Bmi: 25.7, Drug Allergy: Yes" onclick="showMessageBox(this)">
+    <div class="grid2" data-patient-details="Choon Hup | P002, Ward - Bed Number : A1 - 102, Age:61, FamilyRecord: Heart Attack, Smoker: No, Bmi: 25.7, Drug Allergy: Yes, Current Medical Condition : Pneumonia" onclick="showMessageBox(this)">
         <div class="legend">
             <div class="legend-icon legend-heart"></div>
             <div class="legend-text">Heart Rate</div>
@@ -423,7 +351,7 @@
             <p>Ward - Bed Number : A1 - 102</p>
         </div>
     </div>
-    <div class="grid2" data-patient-details="Jackson | P003, Ward - Bed Number : A1 - 103, Age : 55, FamilyRecord: Cancer, Smoker: Yes, Bmi: 22.7, Drug Allergy: Yes" onclick="showMessageBox(this)">
+    <div class="grid2" data-patient-details="Jackson | P003, Ward - Bed Number : A1 - 103, Age:55, FamilyRecord: Cancer, Smoker: Yes, Bmi: 22.7, Drug Allergy: Yes, Current Medical Condition : Ischaemic heart diseases" onclick="showMessageBox(this)">
         <div class="legend">
             <div class="legend-icon legend-heart"></div>
             <div class="legend-text">Heart Rate</div>
@@ -456,7 +384,7 @@
             <p>Ward - Bed Number : A1 - 103</p>
         </div>
     </div>
-    <div class="grid2" data-patient-details="Akira | P004, Ward - Bed Number : A1 - 104, Age : 51, FamilyRecord: Stroke, Smoker: Yes, Bmi: 26.7, Drug Allergy: No" onclick="showMessageBox(this)">
+    <div class="grid2" data-patient-details="Akira | P004, Ward - Bed Number : A1 - 104, Age:49, FamilyRecord: Stroke, Smoker: Yes, Bmi: 26.7, Drug Allergy: No, Current Medical Condition : Cerebrovascular diseases" onclick="showMessageBox(this)">
         <div class="legend">
             <div class="legend-icon legend-heart"></div>
             <div class="legend-text">Heart Rate</div>
@@ -489,7 +417,7 @@
             <p>Ward - Bed Number : A1 - 104</p>
         </div>
     </div>
-    <div class="grid2" data-patient-details="Prada | P005, Ward - Bed Number : A1 - 105, Age : 49, FamilyRecord: LiverCancer, Smoker: Yes, Bmi: 21.7, Drug Allergy: No" onclick="showMessageBox(this)">
+    <div class="grid2" data-patient-details="Prada | P005, Ward - Bed Number : A1 - 105, Age:47, FamilyRecord: LiverCancer, Smoker: Yes, Bmi: 21.7, Drug Allergy: No, Current Medical Condition : Hypertensive diseases" onclick="showMessageBox(this)">
         <div class="legend">
             <div class="legend-icon legend-heart"></div>
             <div class="legend-text">Heart Rate</div>
@@ -522,7 +450,7 @@
             <p>Ward - Bed Number : A1 - 105</p>
         </div>
     </div>
-     <div class="grid3" onclick="showMessageBox2('Patrick|P005', '121', 'Low Breathing Rate','55', '12:30 PM', 'Diabetes', 'Yes', '23.7', 'Please bring AED and CPR required.')">
+    <div class="grid2" data-patient-details="Patrick | P006, Ward - Bed Number : A1 - 106, Age:55, FamilyRecord: Diabetes, Smoker: Yes, Bmi: 23.7, Drug Allergy: No, Current Medical Condition : Diabetes" onclick="showMessageBox(this)">
         <div class="legend">
             <div class="legend-icon legend-heart"></div>
             <div class="legend-text">Heart Rate</div>
@@ -561,15 +489,7 @@
             <p class="modal-content" id="messageText"></p>
             <button class="modal-button" onclick="hideMessageBox()">Close</button>
         </div>
-    </div>
-
-<div class="modal-container2" id="myModal2">
-        <div class="modal-box2">
-            <p class="modal-title2">Inmate's Details</p>
-            <p class="modal-content2" id="messageText2"></p>
-            <button class="modal-button2" onclick="hideMessageBox2()">Acknowledged</button>
-        </div>
-    </div>
+    </div>   
 </main>
     <script>
         function showMessageBox(gridElement) {
@@ -589,33 +509,6 @@
 
     modal.style.display = "block";
 }
-
-function showMessageBox2(patientName, bedNumber, status,age, incidentTime, familyRecord, smoker, bmi, equipment) {
-    const modal = document.getElementById("myModal2");
-    const messageText = document.getElementById("messageText2");
-
-    // Get the current date and time
-    const currentTime = new Date();
-    const formattedTime = currentTime.toLocaleTimeString();
-
-    // Set the message text with the provided information
-    messageText2.innerHTML = `
-        Patient Name: ${patientName}<br><br>
-        Please proceed to Ward A1<br>
-        Bed Number: ${bedNumber}<br><br>
-        Status: ${status}<br><br>
-        Age: ${age}<br><br>
-        Incident Time: ${incidentTime}<br><br>
-        Family Record: ${familyRecord}<br><br>
-        Smoker: ${smoker}<br><br>
-        BMI: ${bmi}<br><br>
-        Equipment: ${equipment}<br><br>
-        Additional Information:<br>
-    `;
-
-    modal.style.display = "block";
-}
-
 
 // Function to update heart rate and breathing rate numbers
 function updateRates() {
@@ -639,23 +532,23 @@ function updateRates() {
     const bodyTemperatureElement5 = document.getElementById("bodyTemperature5");
 
 
-  // Generate random heart rate and breathing rate values within a specific range
-  const randomHeartRate = Math.floor(Math.random() * (67 - 60 + 1)) + 60; // Range: 60-68 bpm
+      // Generate random heart rate and breathing rate values within a specific range
+      const randomHeartRate = Math.floor(Math.random() * (90 - 60 + 1)) + 60; // Range: 60-90 bpm
     const randomBreathingRate = Math.floor(Math.random() * (16 - 10 + 1)) + 10; // Range: 10-30 bpm
 //
-const randomHeartRate2 = Math.floor(Math.random() * (76 - 70 + 1)) + 70; // Range: 70-76 bpm
+const randomHeartRate2 = Math.floor(Math.random() * (70 - 60 + 1)) + 60; // Range: 60-70 bpm
     const randomBreathingRate2 = Math.floor(Math.random() * (18 - 10 + 1)) + 10; // Range: 10-30 bpm
 //
-const randomHeartRate3 = Math.floor(Math.random() * (85 - 80 + 1)) + 80; // Range: 80-85 bpm
+const randomHeartRate3 = Math.floor(Math.random() * (85 - 60 + 1)) + 60; // Range: 60-85 bpm
     const randomBreathingRate3 = Math.floor(Math.random() * (19 - 10 + 1)) + 10; // Range: 10-30 bpm
 //
-const randomHeartRate4 = Math.floor(Math.random() * (94 - 90 + 1)) + 90; // Range: 90-94 bpm
+const randomHeartRate4 = Math.floor(Math.random() * (92 - 60 + 1)) + 60; // Range: 60-92 bpm
     const randomBreathingRate4 = Math.floor(Math.random() * (13 - 10 + 1)) + 10; // Range: 10-30 bpm
 //
-const randomHeartRate5 = Math.floor(Math.random() * (73 - 79 + 1)) + 79; // Range: 73-79 bpm
+const randomHeartRate5 = Math.floor(Math.random() * (77 - 60 + 1)) + 60; // Range: 60-77 bpm
     const randomBreathingRate5 = Math.floor(Math.random() * (14 - 10 + 1)) + 10; // Range: 10-30 bpm
 //
-const randomHeartRate6 = Math.floor(Math.random() * (120 - 115 + 1)) + 115; // Range: 111-120 bpm
+const randomHeartRate6 = Math.floor(Math.random() * (88 - 60 + 1)) + 60; // Range: 60-88 bpm
     const randomBreathingRate6 = Math.floor(Math.random() * (15 - 10 + 1)) + 10; // Range: 10-30 bpm
 //
 const randomBodyTemperature = (Math.random() * (34.9 - 35) + 35).toFixed(1); // Rounded to one decimal place
@@ -695,11 +588,6 @@ updateRates();
 
         function hideMessageBox() {
             const modal = document.getElementById("myModal");
-            modal.style.display = "none";
-        }
-
-       function hideMessageBox2() {
-            const modal = document.getElementById("myModal2");
             modal.style.display = "none";
         }
     </script>
