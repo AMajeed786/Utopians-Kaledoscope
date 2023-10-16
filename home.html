@@ -526,30 +526,30 @@ function updateRates() {
 
 
     // Generate random heart rate and breathing rate values within a specific range
-    const randomHeartRate = Math.floor(Math.random() * (150 - 60 + 1)) + 60; // Range: 60-150 bpm
-    const randomBreathingRate = Math.floor(Math.random() * (30 - 10 + 1)) + 10; // Range: 10-30 bpm
+    const randomHeartRate = Math.floor(Math.random() * (90 - 60 + 1)) + 60; // Range: 60-90 bpm
+    const randomBreathingRate = Math.floor(Math.random() * (16 - 10 + 1)) + 10; // Range: 10-30 bpm
 //
-const randomHeartRate2 = Math.floor(Math.random() * (130 - 60 + 1)) + 60; // Range: 60-150 bpm
-    const randomBreathingRate2 = Math.floor(Math.random() * (28 - 10 + 1)) + 10; // Range: 10-30 bpm
+const randomHeartRate2 = Math.floor(Math.random() * (70 - 60 + 1)) + 60; // Range: 60-70 bpm
+    const randomBreathingRate2 = Math.floor(Math.random() * (18 - 10 + 1)) + 10; // Range: 10-30 bpm
 //
-const randomHeartRate3 = Math.floor(Math.random() * (170 - 60 + 1)) + 60; // Range: 60-150 bpm
-    const randomBreathingRate3 = Math.floor(Math.random() * (34 - 10 + 1)) + 10; // Range: 10-30 bpm
+const randomHeartRate3 = Math.floor(Math.random() * (85 - 60 + 1)) + 60; // Range: 60-85 bpm
+    const randomBreathingRate3 = Math.floor(Math.random() * (19 - 10 + 1)) + 10; // Range: 10-30 bpm
 //
-const randomHeartRate4 = Math.floor(Math.random() * (163 - 60 + 1)) + 60; // Range: 60-150 bpm
-    const randomBreathingRate4 = Math.floor(Math.random() * (31 - 10 + 1)) + 10; // Range: 10-30 bpm
+const randomHeartRate4 = Math.floor(Math.random() * (92 - 60 + 1)) + 60; // Range: 60-92 bpm
+    const randomBreathingRate4 = Math.floor(Math.random() * (13 - 10 + 1)) + 10; // Range: 10-30 bpm
 //
-const randomHeartRate5 = Math.floor(Math.random() * (168 - 60 + 1)) + 60; // Range: 60-150 bpm
-    const randomBreathingRate5 = Math.floor(Math.random() * (38 - 10 + 1)) + 10; // Range: 10-30 bpm
+const randomHeartRate5 = Math.floor(Math.random() * (77 - 60 + 1)) + 60; // Range: 60-77 bpm
+    const randomBreathingRate5 = Math.floor(Math.random() * (14 - 10 + 1)) + 10; // Range: 10-30 bpm
 //
-const randomHeartRate6 = Math.floor(Math.random() * (168 - 60 + 1)) + 60; // Range: 60-150 bpm
-    const randomBreathingRate6 = Math.floor(Math.random() * (38 - 10 + 1)) + 10; // Range: 10-30 bpm
+const randomHeartRate6 = Math.floor(Math.random() * (88 - 60 + 1)) + 60; // Range: 60-88 bpm
+    const randomBreathingRate6 = Math.floor(Math.random() * (15 - 10 + 1)) + 10; // Range: 10-30 bpm
 //
-const randomBodyTemperature = (Math.random() * (40 - 35) + 35).toFixed(1); // Rounded to one decimal place
-const randomBodyTemperature1 = (Math.random() * (40 - 35) + 35).toFixed(1); // Rounded to one decimal place
-const randomBodyTemperature2 = (Math.random() * (40 - 35) + 35).toFixed(1); // Rounded to one decimal place
-const randomBodyTemperature3 = (Math.random() * (40 - 35) + 35).toFixed(1); // Rounded to one decimal place
-const randomBodyTemperature4 = (Math.random() * (40 - 35) + 35).toFixed(1); // Rounded to one decimal place
-const randomBodyTemperature5 = (Math.random() * (40 - 35) + 35).toFixed(1); // Rounded to one decimal place
+const randomBodyTemperature = (Math.random() * (34.9 - 35) + 35).toFixed(1); // Rounded to one decimal place
+const randomBodyTemperature1 = (Math.random() * (34.3 - 35) + 35).toFixed(1); // Rounded to one decimal place
+const randomBodyTemperature2 = (Math.random() * (35.9 - 35) + 35).toFixed(1); // Rounded to one decimal place
+const randomBodyTemperature3 = (Math.random() * (36.1 - 35) + 35).toFixed(1); // Rounded to one decimal place
+const randomBodyTemperature4 = (Math.random() * (36 - 35) + 35).toFixed(1); // Rounded to one decimal place
+const randomBodyTemperature5 = (Math.random() * (35.2 - 35) + 35).toFixed(1); // Rounded to one decimal place
 
     // Update the placeholders with the new values
     heartRateElement.innerText = randomHeartRate;
@@ -572,7 +572,7 @@ const randomBodyTemperature5 = (Math.random() * (40 - 35) + 35).toFixed(1); // R
     bodyTemperatureElement5.innerText = randomBodyTemperature5;
 
     // Call the function periodically (e.g., every 3 seconds)
-    setTimeout(updateRates, 3000); // 3000 milliseconds (3 seconds)
+    setTimeout(updateRates, 2000); // 3000 milliseconds (3 seconds)
 }
 
 // Call the function to start updating rates

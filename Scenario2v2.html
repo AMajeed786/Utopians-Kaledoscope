@@ -289,7 +289,7 @@
         </ul>
     </nav>
 <main>
-    <div class="grid2" onclick="showMessageBox('Patrick|P009', '121', 'Low Breathing Rate', '12:30 PM', 'Diabetes', 'Yes', '23.7', 'Please bring AED and CPR required.')">
+    <div class="grid2" onclick="showMessageBox('Patrick|P005', '105','66', 'Low Breathing Rate', '12:30 PM', 'Diabetes', 'Yes', '23.7', 'Please bring AED and CPR required.',' Bring Oxygen Mask')">
         <div class="legend">
             <div class="legend-icon legend-heart"></div>
             <div class="legend-text">Heart Rate</div>
@@ -318,8 +318,8 @@
                 </div>
             </div>
         <div class="patient-details">
-            <p>Inmate Name & ID: Patrick | P009</p>
-            <p>Ward - Bed Number : A1 - 121</p>
+            <p>Inmate Name & ID: Patrick | P005</p>
+            <p>Ward - Bed Number : A1 - 105</p>
         </div>
     </div>
     <div class="modal-container" id="myModal">
@@ -331,7 +331,7 @@
     </div>
 </main>
     <script>
-        function showMessageBox(patientName, bedNumber, status, incidentTime, familyRecord, smoker, bmi, equipment) {
+        function showMessageBox(patientName, bedNumber,Age, status, incidentTime, familyRecord, smoker, bmi, equipment, addition) {
     const modal = document.getElementById("myModal");
     const messageText = document.getElementById("messageText");
 
@@ -344,13 +344,14 @@
         Patient Name: ${patientName}<br><br>
         Please proceed to Ward A1<br>
         Bed Number: ${bedNumber}<br><br>
+        Age : ${Age}<br><br>
         Status: ${status}<br>
         Incident Time: ${incidentTime}<br><br>
         Family Record: ${familyRecord}<br>
         Smoker: ${smoker}<br><br>
         BMI: ${bmi}<br><br>
         Equipment: ${equipment}<br><br>
-        Additional Information:<br>
+        Additional Information: ${addition} <br>
     `;
 
     modal.style.display = "block";
@@ -360,33 +361,22 @@
 function updateRates() {
     const heartRateElement = document.getElementById("heartRate");
     const breathingRateElement = document.getElementById("breathingRate");
-    const heartRateElement2 = document.getElementById("heartRate2");
-    const breathingRateElement2 = document.getElementById("breathingRate2");
     
     const bodyTemperatureElement = document.getElementById("bodyTemperature");
-    const bodyTemperatureElement1 = document.getElementById("bodyTemperature1");
 
     // Generate random heart rate and breathing rate values within a specific range
-    const randomHeartRate = Math.floor(Math.random() * (78 - 60 + 1)) + 60; // Range: 60-150 bpm
-    const randomBreathingRate = Math.floor(Math.random() * (15 - 10 + 1)) + 10; // Range: 10-30 bpm
-//
-const randomHeartRate2 = Math.floor(Math.random() * (130 - 60 + 1)) + 60; // Range: 60-150 bpm
-    const randomBreathingRate2 = Math.floor(Math.random() * (12 - 10 + 1)) + 10; // Range: 10-30 bpm
-//
-const randomBodyTemperature = (Math.random() * (40 - 35) + 35).toFixed(1); // Rounded to one decimal place
-const randomBodyTemperature1 = (Math.random() * (40 - 35) + 35).toFixed(1); // Rounded to one decimal place
+    const randomHeartRate = Math.floor(Math.random() * (120 - 115 + 1)) + 115; // Range: 115-120 bpm
+    const randomBreathingRate = Math.floor(Math.random() * (11 - 10 + 1)) + 10; // Range: 12-15 bpm
+const randomBodyTemperature = (Math.random() * (38.6 - 38) + 38).toFixed(1); // Rounded to one decimal place
 
     // Update the placeholders with the new values
     heartRateElement.innerText = randomHeartRate;
     breathingRateElement.innerText = randomBreathingRate;
-    heartRateElement2.innerText = randomHeartRate2;
-    breathingRateElement2.innerText = randomBreathingRate2;
     
     bodyTemperatureElement.innerText = randomBodyTemperature;
-    bodyTemperatureElement1.innerText = randomBodyTemperature1;
 
     // Call the function periodically (e.g., every 3 seconds)
-    setTimeout(updateRates, 2000); // 3000 milliseconds (3 seconds)
+    setTimeout(updateRates, 3000); // 3000 milliseconds (3 seconds)
 }
 
 // Call the function to start updating rates
