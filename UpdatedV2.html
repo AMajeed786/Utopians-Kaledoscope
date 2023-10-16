@@ -245,6 +245,35 @@
         transform: translateX(-5px) rotate(10deg);
     }
 }
+.legend {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.legend-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.legend-heart {
+    background-color: #ff5555; /* Red for Heart Rate */
+}
+
+.legend-breath {
+    background-color: #5599ff; /* Blue for Breathing Rate */
+}
+
+.legend-temp {
+    background-color: #ff9900; /* Yellow for Body Temperature */
+}
+
+.legend-text {
+    font-weight: bold;
+    font-size: 16px;
+}
     </style>
 </head>
 <body>
@@ -261,15 +290,27 @@
     </nav>
 <main>
     <div class="grid2" onclick="showMessageBox('Alex|P009', '121', 'Low Breathing Rate', '12:30 PM', 'Diabetes', 'Yes', '23.7', 'Please bring AED and CPR required.')">
+        <div class="legend">
+            <div class="legend-icon legend-heart"></div>
+            <div class="legend-text">Heart Rate</div>
+        </div>
         <div class="animation-container">
             <div class="heart-rate-animation">
                 <div class="rate-number"><span id="heartRate">0</span> bpm</div>
             </div>
         </div>
+        <div class="legend">
+            <div class="legend-icon legend-breath"></div>
+            <div class="legend-text">Breathing Rate</div>
+        </div>
         <div class="animation-container">
             <div class="breathing-rate-animation">
                 <div class="rate-number"><span id="breathingRate">0</span> bpm</div>
             </div>
+        </div>
+        <div class="legend">
+            <div class="legend-icon legend-temp"></div>
+            <div class="legend-text">Body Temperature</div>
         </div>
        <div class="animation-container">
                 <div class="temperature-animation">
@@ -282,15 +323,27 @@
         </div>
     </div>
     <div class="grid2" onclick="showMessageBox('Ronaldo|P012', '132', 'High Heart Rate', '01:45 PM', 'No Medical Record', 'No', '22.3','CPR required and Activate Ambulance')">
+        <div class="legend">
+            <div class="legend-icon legend-heart"></div>
+            <div class="legend-text">Heart Rate</div>
+        </div>
         <div class="animation-container">
             <div class="heart-rate-animation">
                 <div class="rate-number"><span id="heartRate2">0</span> bpm</div>
             </div>
         </div>
+        <div class="legend">
+            <div class="legend-icon legend-breath"></div>
+            <div class="legend-text">Breathing Rate</div>
+        </div>
         <div class="animation-container">
             <div class="breathing-rate-animation">
                 <div class="rate-number"><span id="breathingRate2">0</span> bpm</div>
             </div>
+        </div>
+        <div class="legend">
+            <div class="legend-icon legend-temp"></div>
+            <div class="legend-text">Body Temperature</div>
         </div>
         <div class="animation-container">
                 <div class="temperature-animation">

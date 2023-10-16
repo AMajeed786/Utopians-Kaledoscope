@@ -13,7 +13,7 @@
             padding: 0;
         }
 
-        /* Header styles */
+         /* Header styles */
         header {
             background-color: #007BFF;
             color: #fff;
@@ -52,7 +52,6 @@
             font-size: 18px;
         }
         
-
         /* Main content styles */
         main {
             display: flex;
@@ -60,20 +59,22 @@
             justify-content: space-around;
             padding: 10px;
         }
-.grid2 {
-            width: 355px;
-            height: 390px;
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 13px;
-            margin: 13px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content:center; 
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-       
+        .grid2 {
+    width: 315px;
+    height: 315px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 75px; /* Adjust the padding as needed */
+    margin: 13px; /* Adjust the margin to reduce the gap */
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    animation: backgroundBlink 0.75s infinite; 
+    box-shadow: 2px 4px 6px rgba(241, 2, 2, 0.1);
+}
+
+        
         /* Modal styles */
         .modal-container {
             display: none;
@@ -89,7 +90,7 @@
             backdrop-filter: blur(8px);
         }
         .modal-box {
-            background-color: #fff; /* Background color of the modal */
+            background-color: #0265b5; /* Background color of the modal */
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -105,11 +106,13 @@
             font-size: 24px;
             font-weight: bold;
             margin-bottom: 10px;
+            color:chartreuse;
         }
 
         .modal-content {
             font-size: 18px;
             margin-bottom: 20px;
+            color: #ffffff;
         }
 
         .modal-button {
@@ -205,18 +208,23 @@
             }
         }
 
-        /* Define the background blink animation */
         @keyframes backgroundBlink {
-            0% {
-                background-color: #fff;
-            }
-            50% {
-                background-color: #ffdddd;
-            }
-            100% {
-                background-color: #fff;
-            }
-        }
+    0% {
+        background-color: #fff;
+    }
+    45% {
+        background-color: #fff;
+    }
+    50% {
+        background-color: #ff0000; /* A thicker red color */
+    }
+    55% {
+        background-color: #ff0000;
+    }
+    100% {
+        background-color: #fff;
+    }
+}
         #notification-bell {
     position: relative;
     font-size: 24px;
@@ -237,10 +245,6 @@
         transform: translateX(-5px) rotate(10deg);
     }
 }
-.message-line {
-    margin: 10px 0; /* Add space above and below each line */
-}
-/* Add styles for legends */
 .legend {
     display: flex;
     align-items: center;
@@ -285,172 +289,7 @@
         </ul>
     </nav>
 <main>
-    <div class="grid2" data-patient-details="John Doe | P001, Ward - Bed Number : A1 - 101, Age:63, FamilyRecord: Diabetes, Smoker: Yes, Bmi: 23.7, Drug Allergy: No, Current Medical Condition : Cancer" onclick="showMessageBox(this)">
-        <div class="legend">
-            <div class="legend-icon legend-heart"></div>
-            <div class="legend-text">Heart Rate</div>
-        </div>
-        <div class="animation-container">
-            <div class="heart-rate-animation">
-                <div class="rate-number"><span id="heartRate">0</span> bpm</div>
-            </div>
-        </div>
-        <div class="legend">
-            <div class="legend-icon legend-breath"></div>
-            <div class="legend-text">Breathing Rate</div>
-        </div>
-        <div class="animation-container">
-            <div class="breathing-rate-animation">
-                <div class="rate-number"><span id="breathingRate">0</span> bpm</div>
-            </div>
-        </div>
-        <div class="legend">
-            <div class="legend-icon legend-temp"></div>
-            <div class="legend-text">Body Temperature</div>
-        </div>
-       <div class="animation-container">
-                <div class="temperature-animation">
-                    <div class="temperature-number"><span id="bodyTemperature">0</span>°C</div>
-                </div>
-            </div>
-        <div class="patient-details">
-            <p>Inmate Name & ID: John Doe | P001</p>
-            <p>Ward - Bed Number : A1 - 101</p>
-        </div>
-    </div>
-    <div class="grid2" data-patient-details="Choon Hup | P002, Ward - Bed Number : A1 - 102, Age:61, FamilyRecord: Heart Attack, Smoker: No, Bmi: 25.7, Drug Allergy: Yes, Current Medical Condition : Pneumonia" onclick="showMessageBox(this)">
-        <div class="legend">
-            <div class="legend-icon legend-heart"></div>
-            <div class="legend-text">Heart Rate</div>
-        </div>
-        <div class="animation-container">
-            <div class="heart-rate-animation">
-                <div class="rate-number"><span id="heartRate2">0</span> bpm</div>
-            </div>
-        </div>
-        <div class="legend">
-            <div class="legend-icon legend-breath"></div>
-            <div class="legend-text">Breathing Rate</div>
-        </div>
-        <div class="animation-container">
-            <div class="breathing-rate-animation">
-                <div class="rate-number"><span id="breathingRate2">0</span> bpm</div>
-            </div>
-        </div>
-        <div class="legend">
-            <div class="legend-icon legend-temp"></div>
-            <div class="legend-text">Body Temperature</div>
-        </div>
-        <div class="animation-container">
-                <div class="temperature-animation">
-                    <div class="temperature-number"><span id="bodyTemperature1">0</span>°C</div>
-                </div>
-            </div>
-        <div class="patient-details">
-            <p>Inmate Name & ID: Choon Hup | P002</p>
-            <p>Ward - Bed Number : A1 - 102</p>
-        </div>
-    </div>
-    <div class="grid2" data-patient-details="Jackson | P003, Ward - Bed Number : A1 - 103, Age:55, FamilyRecord: Cancer, Smoker: Yes, Bmi: 22.7, Drug Allergy: Yes, Current Medical Condition : Ischaemic heart diseases" onclick="showMessageBox(this)">
-        <div class="legend">
-            <div class="legend-icon legend-heart"></div>
-            <div class="legend-text">Heart Rate</div>
-        </div>
-        <div class="animation-container">
-            <div class="heart-rate-animation">
-                <div class="rate-number"><span id="heartRate3">0</span> bpm</div>
-            </div>
-        </div>
-        <div class="legend">
-            <div class="legend-icon legend-breath"></div>
-            <div class="legend-text">Breathing Rate</div>
-        </div>
-        <div class="animation-container">
-            <div class="breathing-rate-animation">
-               <div class="rate-number"><span id="breathingRate3">0</span> bpm</div>
-            </div>
-        </div>
-        <div class="legend">
-            <div class="legend-icon legend-temp"></div>
-            <div class="legend-text">Body Temperature</div>
-        </div>
-        <div class="animation-container">
-            <div class="temperature-animation">
-                <div class="temperature-number"><span id="bodyTemperature2">0</span>°C</div>
-            </div>
-        </div>
-        <div class="patient-details">
-            <p>Inmate Name & ID: Jackson | P003</p>
-            <p>Ward - Bed Number : A1 - 103</p>
-        </div>
-    </div>
-    <div class="grid2" data-patient-details="Akira | P004, Ward - Bed Number : A1 - 104, Age:49, FamilyRecord: Stroke, Smoker: Yes, Bmi: 26.7, Drug Allergy: No, Current Medical Condition : Cerebrovascular diseases" onclick="showMessageBox(this)">
-        <div class="legend">
-            <div class="legend-icon legend-heart"></div>
-            <div class="legend-text">Heart Rate</div>
-        </div>
-        <div class="animation-container">
-            <div class="heart-rate-animation">
-                <div class="rate-number"><span id="heartRate4">0</span> bpm</div>
-            </div>
-        </div>
-        <div class="legend">
-            <div class="legend-icon legend-breath"></div>
-            <div class="legend-text">Breathing Rate</div>
-        </div>
-        <div class="animation-container">
-            <div class="breathing-rate-animation">
-                <div class="rate-number"><span id="breathingRate4">0</span> bpm</div>
-            </div>
-        </div>
-        <div class="legend">
-            <div class="legend-icon legend-temp"></div>
-            <div class="legend-text">Body Temperature</div>
-        </div>
-        <div class="animation-container">
-            <div class="temperature-animation">
-                <div class="temperature-number"><span id="bodyTemperature3">0</span>°C</div>
-            </div>
-        </div>
-        <div class="patient-details">
-            <p>Inmate Name & ID: Akira | P004</p>
-            <p>Ward - Bed Number : A1 - 104</p>
-        </div>
-    </div>
-    <div class="grid2" data-patient-details="Prada | P005, Ward - Bed Number : A1 - 105, Age:47, FamilyRecord: LiverCancer, Smoker: Yes, Bmi: 21.7, Drug Allergy: No, Current Medical Condition : Hypertensive diseases" onclick="showMessageBox(this)">
-        <div class="legend">
-            <div class="legend-icon legend-heart"></div>
-            <div class="legend-text">Heart Rate</div>
-        </div>
-        <div class="animation-container">
-            <div class="heart-rate-animation">
-                <div class="rate-number"><span id="heartRate5">0</span> bpm</div>
-            </div>
-        </div>
-        <div class="legend">
-            <div class="legend-icon legend-breath"></div>
-            <div class="legend-text">Breathing Rate</div>
-        </div>
-        <div class="animation-container">
-            <div class="breathing-rate-animation">
-                <div class="rate-number"><span id="breathingRate5">0</span> bpm</div>
-            </div>
-        </div>
-        <div class="legend">
-            <div class="legend-icon legend-temp"></div>
-            <div class="legend-text">Body Temperature</div>
-        </div>
-        <div class="animation-container">
-            <div class="temperature-animation">
-                <div class="temperature-number"><span id="bodyTemperature4">0</span>°C</div>
-            </div>
-        </div>
-        <div class="patient-details">
-            <p>Inmate Name & ID: Prada | P005</p>
-            <p>Ward - Bed Number : A1 - 105</p>
-        </div>
-    </div>
-    <div class="grid2" data-patient-details="Patrick | P006, Ward - Bed Number : A1 - 106, Age:55, FamilyRecord: Diabetes, Smoker: Yes, Bmi: 23.7, Drug Allergy: No, Current Medical Condition : Diabetes" onclick="showMessageBox(this)">
+    <div class="grid2" onclick="showMessageBox('Patrick|P009', '121', 'Low Breathing Rate','55', '12:30 PM', 'Diabetes', 'Yes', '23.7', 'Please bring AED and CPR required.')">
         <div class="legend">
             <div class="legend-icon legend-heart"></div>
             <div class="legend-text">Heart Rate</div>
@@ -485,31 +324,37 @@
     </div>
     <div class="modal-container" id="myModal">
         <div class="modal-box">
-            <p class="modal-title">Inmate's Details</p>
+            <p class="modal-title">Message Broadcasted to Officer's!</p>
             <p class="modal-content" id="messageText"></p>
-            <button class="modal-button" onclick="hideMessageBox()">Close</button>
+            <button class="modal-button" onclick="hideMessageBox()">Acknowldeged</button>
         </div>
-    </div>   
+    </div>
 </main>
     <script>
-        function showMessageBox(gridElement) {
+        function showMessageBox(patientName, bedNumber, status, incidentTime, familyRecord, smoker, bmi, equipment) {
     const modal = document.getElementById("myModal");
     const messageText = document.getElementById("messageText");
 
-    // Get the patient details from the data attribute
-    const patientDetails = gridElement.getAttribute("data-patient-details");
+    // Get the current date and time
+    const currentTime = new Date();
+    const formattedTime = currentTime.toLocaleTimeString();
 
-    // Split the patient details into an array by comma and space
-    const detailsArray = patientDetails.split(", ");
-
-    const formattedDetails = detailsArray.map(detail => `<p class="message-line">${detail}</p>`).join('');
-
-    // Set the innerHTML of the message text with the formatted details
-    messageText.innerHTML = formattedDetails;
+    // Set the message text with the provided information
+    messageText.innerHTML = `
+        Patient Name: ${patientName}<br><br>
+        Please proceed to Ward A1<br>
+        Bed Number: ${bedNumber}<br><br>
+        Status: ${status}<br>
+        Incident Time: ${incidentTime}<br><br>
+        Family Record: ${familyRecord}<br>
+        Smoker: ${smoker}<br><br>
+        BMI: ${bmi}<br><br>
+        Equipment: ${equipment}<br><br>
+        Additional Information:<br>
+    `;
 
     modal.style.display = "block";
 }
-
 // Function to update heart rate and breathing rate numbers
 function updateRates() {
     const heartRateElement = document.getElementById("heartRate");
