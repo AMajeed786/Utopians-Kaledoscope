@@ -289,14 +289,14 @@
         </ul>
     </nav>
 <main>
-    <div class="grid2" onclick="showMessageBox('Patrick|P009', '121', 'Low Breathing Rate','55', '12:30 PM', 'Diabetes', 'Yes', '23.7', 'Please bring AED and CPR required.')">
+    <div class="grid2" onclick="showMessageBox('Patrick|P009', '121', 'Low Breathing Rate', '12:30 PM', 'Diabetes', 'Yes', '23.7', 'Please bring AED and CPR required.')">
         <div class="legend">
             <div class="legend-icon legend-heart"></div>
             <div class="legend-text">Heart Rate</div>
         </div>
         <div class="animation-container">
             <div class="heart-rate-animation">
-                <div class="rate-number"><span id="heartRate6">0</span> bpm</div>
+                <div class="rate-number"><span id="heartRate">0</span> bpm</div>
             </div>
         </div>
         <div class="legend">
@@ -305,21 +305,21 @@
         </div>
         <div class="animation-container">
             <div class="breathing-rate-animation">
-                <div class="rate-number"><span id="breathingRate6">0</span> bpm</div>
+                <div class="rate-number"><span id="breathingRate">0</span> bpm</div>
             </div>
         </div>
         <div class="legend">
             <div class="legend-icon legend-temp"></div>
             <div class="legend-text">Body Temperature</div>
         </div>
-        <div class="animation-container">
-            <div class="temperature-animation">
-                <div class="temperature-number"><span id="bodyTemperature5">0</span>°C</div>
+       <div class="animation-container">
+                <div class="temperature-animation">
+                    <div class="temperature-number"><span id="bodyTemperature">0</span>°C</div>
+                </div>
             </div>
-        </div>
         <div class="patient-details">
-            <p>Inmate Name & ID: Patrick | P005</p>
-            <p>Ward - Bed Number : A1 - 105</p>
+            <p>Inmate Name & ID: Patrick | P009</p>
+            <p>Ward - Bed Number : A1 - 121</p>
         </div>
     </div>
     <div class="modal-container" id="myModal">
@@ -355,82 +355,42 @@
 
     modal.style.display = "block";
 }
+
 // Function to update heart rate and breathing rate numbers
 function updateRates() {
     const heartRateElement = document.getElementById("heartRate");
     const breathingRateElement = document.getElementById("breathingRate");
     const heartRateElement2 = document.getElementById("heartRate2");
     const breathingRateElement2 = document.getElementById("breathingRate2");
-    const heartRateElement3 = document.getElementById("heartRate3");
-    const breathingRateElement3 = document.getElementById("breathingRate3");
-    const heartRateElement4 = document.getElementById("heartRate4");
-    const breathingRateElement4 = document.getElementById("breathingRate4");
-    const heartRateElement5 = document.getElementById("heartRate5");
-    const breathingRateElement5 = document.getElementById("breathingRate5");
-    const heartRateElement6 = document.getElementById("heartRate6");
-    const breathingRateElement6 = document.getElementById("breathingRate6");
+    
     const bodyTemperatureElement = document.getElementById("bodyTemperature");
     const bodyTemperatureElement1 = document.getElementById("bodyTemperature1");
-    const bodyTemperatureElement2 = document.getElementById("bodyTemperature2");
-    const bodyTemperatureElement3 = document.getElementById("bodyTemperature3");
-    const bodyTemperatureElement4 = document.getElementById("bodyTemperature4");
-    const bodyTemperatureElement5 = document.getElementById("bodyTemperature5");
-
 
     // Generate random heart rate and breathing rate values within a specific range
-    const randomHeartRate = Math.floor(Math.random() * (150 - 60 + 1)) + 60; // Range: 60-150 bpm
-    const randomBreathingRate = Math.floor(Math.random() * (30 - 10 + 1)) + 10; // Range: 10-30 bpm
+    const randomHeartRate = Math.floor(Math.random() * (78 - 60 + 1)) + 60; // Range: 60-150 bpm
+    const randomBreathingRate = Math.floor(Math.random() * (15 - 10 + 1)) + 10; // Range: 10-30 bpm
 //
 const randomHeartRate2 = Math.floor(Math.random() * (130 - 60 + 1)) + 60; // Range: 60-150 bpm
-    const randomBreathingRate2 = Math.floor(Math.random() * (28 - 10 + 1)) + 10; // Range: 10-30 bpm
-//
-const randomHeartRate3 = Math.floor(Math.random() * (170 - 60 + 1)) + 60; // Range: 60-150 bpm
-    const randomBreathingRate3 = Math.floor(Math.random() * (34 - 10 + 1)) + 10; // Range: 10-30 bpm
-//
-const randomHeartRate4 = Math.floor(Math.random() * (163 - 60 + 1)) + 60; // Range: 60-150 bpm
-    const randomBreathingRate4 = Math.floor(Math.random() * (31 - 10 + 1)) + 10; // Range: 10-30 bpm
-//
-const randomHeartRate5 = Math.floor(Math.random() * (168 - 60 + 1)) + 60; // Range: 60-150 bpm
-    const randomBreathingRate5 = Math.floor(Math.random() * (38 - 10 + 1)) + 10; // Range: 10-30 bpm
-//
-const randomHeartRate6 = Math.floor(Math.random() * (168 - 60 + 1)) + 60; // Range: 60-150 bpm
-    const randomBreathingRate6 = Math.floor(Math.random() * (38 - 10 + 1)) + 10; // Range: 10-30 bpm
+    const randomBreathingRate2 = Math.floor(Math.random() * (12 - 10 + 1)) + 10; // Range: 10-30 bpm
 //
 const randomBodyTemperature = (Math.random() * (40 - 35) + 35).toFixed(1); // Rounded to one decimal place
 const randomBodyTemperature1 = (Math.random() * (40 - 35) + 35).toFixed(1); // Rounded to one decimal place
-const randomBodyTemperature2 = (Math.random() * (40 - 35) + 35).toFixed(1); // Rounded to one decimal place
-const randomBodyTemperature3 = (Math.random() * (40 - 35) + 35).toFixed(1); // Rounded to one decimal place
-const randomBodyTemperature4 = (Math.random() * (40 - 35) + 35).toFixed(1); // Rounded to one decimal place
-const randomBodyTemperature5 = (Math.random() * (40 - 35) + 35).toFixed(1); // Rounded to one decimal place
 
     // Update the placeholders with the new values
     heartRateElement.innerText = randomHeartRate;
     breathingRateElement.innerText = randomBreathingRate;
     heartRateElement2.innerText = randomHeartRate2;
     breathingRateElement2.innerText = randomBreathingRate2;
-    heartRateElement3.innerText = randomHeartRate3;
-    breathingRateElement3.innerText = randomBreathingRate3;
-    heartRateElement4.innerText = randomHeartRate4;
-    breathingRateElement4.innerText = randomBreathingRate4;
-    heartRateElement5.innerText = randomHeartRate5;
-    breathingRateElement5.innerText = randomBreathingRate5;
-    heartRateElement6.innerText = randomHeartRate6;
-    breathingRateElement6.innerText = randomBreathingRate6;
+    
     bodyTemperatureElement.innerText = randomBodyTemperature;
     bodyTemperatureElement1.innerText = randomBodyTemperature1;
-    bodyTemperatureElement2.innerText = randomBodyTemperature2;
-    bodyTemperatureElement3.innerText = randomBodyTemperature3;
-    bodyTemperatureElement4.innerText = randomBodyTemperature4;
-    bodyTemperatureElement5.innerText = randomBodyTemperature5;
 
     // Call the function periodically (e.g., every 3 seconds)
-    setTimeout(updateRates, 3000); // 3000 milliseconds (3 seconds)
+    setTimeout(updateRates, 2000); // 3000 milliseconds (3 seconds)
 }
 
 // Call the function to start updating rates
 updateRates();
-
-
         function hideMessageBox() {
             const modal = document.getElementById("myModal");
             modal.style.display = "none";
