@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splash Screen</title>
+    <style>
+        /* Add CSS styles for your splash screen here */
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .splash-text {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="splash-text"><span id="Utopian's-Kaledescope"></span></div>
+
+    <script>
+        // JavaScript code for any actions you want to perform on the splash screen
+        // For example, you can load resources or perform animations here
+        
+        const loadingText = document.getElementById("Utopian's-Kaledescope");
+    const textToType = "Utopian's-Kaledescope"; // The text you want to type
+
+    let index = 0;
+
+    function typeLetter() {
+        if (index < textToType.length) {
+            loadingText.textContent += textToType.charAt(index);
+            index++;
+        } else {
+            clearInterval(typingInterval); // Stop the typing animation
+        }
+    }
+
+    const typingInterval = setInterval(typeLetter, 100); // Adjust the interval as needed (e.g., 100ms for typing speed)
+
+        setTimeout(function () {
+            // Redirect to the home page after a delay (e.g., 3 seconds)
+            window.location.href = "Updated.html";
+        }, 3000); // 3000 milliseconds (3 seconds)
+    </script>
+</body>
+</html>
