@@ -289,7 +289,7 @@
         </ul>
     </nav>
 <main>
-    <div class="grid2" onclick="showMessageBox('Alex|P009', '121', 'Low Breathing Rate', '12:30 PM', 'Diabetes', 'Yes', '23.7', 'Please bring AED and CPR required.')">
+    <div class="grid2" onclick="showMessageBox('Alex|P009', '121', '54','Low Breathing Rate', '12:30 PM', 'Diabetes', 'Yes', '23.7', 'Please bring AED and CPR required.')">
         <div class="legend">
             <div class="legend-icon legend-heart"></div>
             <div class="legend-text">Heart Rate</div>
@@ -322,7 +322,7 @@
             <p>Ward - Bed Number : A1 - 121</p>
         </div>
     </div>
-    <div class="grid2" onclick="showMessageBox('Ronaldo|P012', '132', 'High Heart Rate', '01:45 PM', 'No Medical Record', 'No', '22.3','CPR required and Activate Ambulance')">
+    <div class="grid2" onclick="showMessageBox('Ronaldo|P012', '132','59', 'High Heart Rate', '01:45 PM', 'No Medical Record', 'No', '22.3','CPR required and Activate Ambulance')">
         <div class="legend">
             <div class="legend-icon legend-heart"></div>
             <div class="legend-text">Heart Rate</div>
@@ -364,7 +364,7 @@
     </div>
 </main>
     <script>
-        function showMessageBox(patientName, bedNumber, status, incidentTime, familyRecord, smoker, bmi, equipment) {
+        function showMessageBox(patientName, bedNumber,age, status, incidentTime, familyRecord, smoker, bmi, equipment) {
     const modal = document.getElementById("myModal");
     const messageText = document.getElementById("messageText");
 
@@ -377,6 +377,7 @@
         Patient Name: ${patientName}<br><br>
         Please proceed to Ward A1<br>
         Bed Number: ${bedNumber}<br><br>
+        Age : ${age}<br><br>
         Status: ${status}<br>
         Incident Time: ${incidentTime}<br><br>
         Family Record: ${familyRecord}<br>
